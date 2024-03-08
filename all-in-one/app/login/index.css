@@ -1,0 +1,96 @@
+body {
+  background-image: linear-gradient(#d4faff, #d4faff);
+  height: 100%;
+}
+.top {
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translateY(-25%);
+}
+.form-back {
+  width: 400px;
+  margin-left: 50%;
+  transform: translate(-50%, -250px);
+
+  color: #0f1014;
+}
+.form-back h2 {
+  text-align: center;
+  font-size: 2.5em;
+  color: #21b7e2;
+  margin-bottom: 25px;
+}
+
+.button {
+  margin-top: 20px;
+  margin-left: 10px;
+  color: #21b7e2;
+  background-color: #202127;
+  transition: 0.2s;
+  width: 90%;
+  text-align: center;
+  border: 2px solid #202127;
+  padding: 10px 30px 10px 3px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #0f1014;
+}
+.button:nth-of-type(1) {
+  background-color: #21b7e2;
+  color: #202127;
+}
+.button:nth-of-type(1):hover {
+  background-color: #1487a7;
+}
+
+.login-form {
+  position: absolute;
+  bottom: -150px;
+  left: 50%;
+  animation: form-appear 0.7s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes form-appear {
+  0% {
+    transform: translate(-200px, 100%);
+  }
+  100% {
+    transform: translate(-200px, 0%);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    width: 100%;
+    margin: 0;
+  }
+  .top,
+  .form-back,
+  .login-form {
+    width: 90%;
+  }
+  .button {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+  .form-back {
+    margin-top: 20px;
+  }
+  .login-form {
+    left: -5px;
+    width: 115%;
+  }
+  @keyframes form-appear {
+    0% {
+      transform: translate(0px, 100%);
+    }
+    100% {
+      transform: translate(0px, 0%);
+    }
+  }
+}

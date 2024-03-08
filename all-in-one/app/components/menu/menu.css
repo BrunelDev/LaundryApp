@@ -1,0 +1,55 @@
+.menu-box {
+  width: 45px;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  transform: translateY(5px);
+}
+/* 
+45px => valeur actuelle
+largeur de menu voulue => ?
+
+*/
+.menu-top {
+  align-self: center;
+  margin: 3px 0px 1.5px 0px;
+  width: 21.7px;
+  height: 1.5px;
+  border-radius: 5px;
+  background-color: white;
+  transition: all 0.5s;
+}
+.menu-middle {
+  align-self: center;
+  margin: 1px 0 1.5px 0;
+  width: 21.7px;
+  height: 1.5px;
+  border-radius: 5px;
+  background-color: white;
+  opacity: 1;
+  transition: all 0.5s;
+}
+.menu-bottom {
+  align-self: center;
+  margin: 1px 0 3px 0;
+  width: 21.7px;
+  height: 1.5px;
+  border-radius: 5px;
+  background-color: white;
+  transition: all 0.2s ease-in-out 0.1s;
+}
+
+.menu-box:hover .menu-top {
+  transform-origin: top left;
+  transform: translateY(0.5px) translateX(8px) rotate(45deg);
+}
+.menu-box:hover .menu-middle {
+  transform: translateX(20px);
+  opacity: 0;
+}
+.menu-box:hover .menu-bottom {
+  transform-origin: left;
+  transform: translate(6px, 7.8px) rotate(-45deg);
+}

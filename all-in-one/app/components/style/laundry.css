@@ -1,0 +1,216 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #202127;
+  color: rgb(197, 197, 197);
+}
+.menu-top {
+  align-self: center;
+  margin: 3px 0px 1.5px 0px;
+  width: 21.7px;
+  height: 1.5px;
+  border-radius: 5px;
+  background-color: white;
+  transition: all 0.5s;
+}
+.menu-middle {
+  align-self: center;
+  margin: 1px 0 1.5px 0;
+  width: 21.7px;
+  height: 1.5px;
+  border-radius: 5px;
+  background-color: white;
+  opacity: 1;
+  transition: all 0.5s;
+}
+.menu-bottom {
+  align-self: center;
+  margin: 1px 0 3px 0;
+  width: 21.7px;
+  height: 1.5px;
+  border-radius: 5px;
+  background-color: white;
+  transition: all 0.5s;
+}
+.menu-box:hover .menu-middle {
+  transform: translateY(3px);
+}
+.menu-box:hover .menu-bottom {
+  transform: translateY(6px);
+}
+.menu-animated:hover .menu-middle {
+  transform: translateY(0);
+}
+.menu-animated:hover .menu-bottom {
+  transform: translateY(7.8px);
+}
+.menu-animated .menu-top {
+  transform-origin: top left;
+  transform: translateY(0.5px) translateX(8px) rotate(45deg);
+}
+.menu-animated .menu-middle {
+  transform: translateX(20px);
+  opacity: 0;
+}
+.menu-animated .menu-bottom {
+  transform-origin: left;
+  transform: translate(6px, 7.8px) rotate(-45deg);
+}
+.register-container {
+  color: #282c33;
+
+  margin-top: 10%;
+  width: 400px;
+  padding: 20px;
+  background-color: azure;
+  border-radius: 15px;
+}
+.register-container-animated {
+  animation: form-disappear 0.8s;
+  opacity: 0;
+}
+@keyframes form-disappear {
+  0% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(105%);
+  }
+}
+.register-container-hide {
+  display: none;
+}
+.register-container h2 {
+  font-size: 1.3em;
+  font-weight: 600;
+}
+.register-container svg:nth-of-type(1) {
+  margin-left: auto;
+}
+.register-container svg:hover {
+  transform: scale(1.05);
+  filter: brightness(1) contrast(1);
+}
+.register-container fieldset {
+  margin-top: 10px;
+}
+.register-container input {
+  width: 100%;
+  border: 2px solid #202127;
+
+  padding: 10px 30px 10px 3px;
+  border-radius: 10px;
+}
+.register-container input:focus {
+  outline: none;
+  outline-width: 3px;
+}
+.lock {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.register-button {
+  margin-top: 20px;
+  color: azure;
+  background-color: #202127;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.register-button:hover {
+  background-color: #0f1014;
+}
+.already-have-account {
+  margin-top: 10px;
+  text-align: center;
+}
+.logo-for-login {
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+}
+.form-error {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 5px;
+  border-radius: 8px;
+  color: white;
+  background-color: rgb(230, 69, 69);
+}
+
+@media screen and (max-width: 709px) {
+  .project-header img {
+    width: 50%;
+    right: 0px;
+    top: 25%;
+  }
+  .project-header h6 {
+    right: -30%;
+  }
+}
+
+@media screen and (max-width: 735px) {
+  .quote-author {
+    top: 103px;
+  }
+  .quote-symbol2 {
+    top: 91px;
+  }
+}
+
+@media screen and (max-width: 838px) {
+  .quote-container {
+    margin-left: 20%;
+  }
+}
+
+@media screen and (max-width: 678px) {
+  nav > ul li {
+    display: none;
+  }
+  .menu {
+    display: block;
+  }
+}
+@media screen and (max-width: 422px) {
+  .quote-container {
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 0.8em;
+  }
+  .quote-author {
+    top: 88px;
+  }
+  .quote-symbol2 {
+    top: 78px;
+  }
+  .quote-symbol1 {
+    top: 8px;
+  }
+}
+@media screen and (max-width: 730px) {
+  .contact-body {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .contact-box {
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    position: static;
+    width: 80%;
+  }
+  .contact-text {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .register-container {
+    width: 90%;
+  }
+}
