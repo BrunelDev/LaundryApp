@@ -1,7 +1,7 @@
 "use client";
 import { FacebookLogo } from "../components/logo/logo";
 
-import "../components/portfolioStyle/portfolio.css";
+import "../components/style/laundry.css";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { signIn } from "next-auth/react";

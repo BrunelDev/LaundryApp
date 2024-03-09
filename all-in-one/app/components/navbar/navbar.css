@@ -1,22 +1,39 @@
 .navbar {
-  width: 100%;
-  background-color: #f7feff;
-  color: #263238;
   display: flex;
   justify-content: space-between;
-  padding: 0 10%;
+  flex-wrap: wrap;
+  padding: 0px 20px;
+  background-color: #f7feff;
+  color: #1e1e1e;
 }
+ul {
+  display: flex;
+  margin-right: 60px;
+}
+li {
+  margin-right: 20px;
+  padding: 10px 0px;
 
-.navbar-buttons a {
-  margin-left: 20px;
-  display: inline-block;
-  height: 100%;
-  padding: 15px 20px 15px 5px;
-  transition: 0.2s;
+  cursor: pointer;
 }
-.navbar-buttons a:nth-of-type(1) {
+li#actual {
   font-weight: 700;
 }
-.navbar-buttons a:hover {
-  transform: scale(1.05);
+li:hover {
+  margin-right: 20px;
+  animation: upToDown 0.4s;
+}
+@keyframes upToDown {
+  50% {
+    transform: translateY(6px);
+    opacity: 0;
+  }
+  51% {
+    transform: translateY(-6px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }

@@ -54,7 +54,7 @@ export function LoginForm() {
       >
         Bonjour...
         <div className="flex">
-          <h2>Register</h2>
+          <h2>Connexion</h2>
           <svg
             onClick={(e) => {
               setHide(false);
@@ -86,7 +86,7 @@ export function LoginForm() {
             />
           </fieldset>
           <fieldset>
-            <legend>password</legend>
+            <legend>Mot de passe</legend>
             <div className="flex relative">
               <input
                 type="password"
@@ -114,12 +114,16 @@ export function LoginForm() {
             </div>
           </fieldset>
 
-          <input type="submit" value="Login" className="register-button" />
+          <input
+            type="submit"
+            value="Se connecter"
+            className="register-button"
+          />
         </form>
         {error != "" && <span className="form-error">{error}</span>}
         <div className="already-have-account">
-          Already have account ?{" "}
-          <span className="text-red-400 login-link">Login</span>
+          Vous avez déjà un compte ?{" "}
+          <span className="text-red-400 login-link">Connectez vous</span>
           <br />
           <span className="text-center">or</span>
           <div className="logo-for-login">

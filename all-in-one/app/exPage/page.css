@@ -1,0 +1,202 @@
+body {
+  background-color: #b4dfe7;
+  color: #202127;
+}
+.top {
+  width: 100%;
+
+  background-image: url("../public/washingmachine.png");
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+  text-align: center;
+  color: white;
+  padding-top: 50px;
+  background-attachment: fixed;
+  margin-bottom: 50px;
+}
+.top-content {
+  padding-top: 100px;
+}
+
+.top-content span {
+  display: inline-block;
+  margin-bottom: 40px;
+}
+.top-content span:nth-of-type(1) {
+  font-size: 2.6em;
+}
+.top-content span:nth-of-type(2) {
+  width: 90%;
+  font-size: 1.8em;
+}
+.top-content span:nth-of-type(3) {
+  padding: 5px;
+  color: #202127;
+  background-color: #21b7e2;
+  border-radius: 5px;
+}
+.top-content span:nth-of-type(4) {
+  padding: 5px 70px;
+  color: #202127;
+  background-color: #83c9dd;
+  border-radius: 15px;
+}
+.subtitle {
+  color: #21b7e2;
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.middle {
+  margin-bottom: 50px;
+}
+.subtitle-description {
+  font-size: 1.2em;
+  text-align: center;
+  color: #83c9dd;
+  margin-bottom: 45px;
+}
+.etape-list {
+  margin-left: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.etape {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+}
+.etape span {
+  font-weight: 600;
+}
+.etape img {
+  width: 160px;
+  height: 159px;
+}
+.offers {
+  background-color: white;
+  padding: 0 12%;
+}
+
+.offers hr {
+  width: 10%;
+  border-color: #21b7e2;
+  border-radius: 10px;
+  border-width: 2px;
+  margin: auto;
+  margin-bottom: 25px;
+}
+.offers-description {
+  margin: auto;
+  width: 75%;
+  font-size: 1.2em;
+}
+.card-container {
+  padding-top: 30px;
+  margin: auto;
+  width: 75%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 420px;
+}
+.offer-card {
+  position: relative;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  width: 45%;
+  text-align: center;
+  box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.452);
+}
+.offer-card div {
+  margin-bottom: 30px;
+}
+
+.offer-card div:nth-of-type(1) {
+  font-size: 1.3em;
+  font-weight: 700;
+}
+.offer-card div:nth-of-type(1) div {
+  font-size: 0.8em;
+  font-weight: 600;
+}
+.offer-card div:nth-of-type(2) div {
+  color: #83c9dd;
+}
+.offer-card div:nth-of-type(3) {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.offer-card input {
+  width: 70%;
+  position: absolute;
+  background-color: #21b7e2;
+  color: white;
+  border-radius: 10px;
+  padding: 5px 5px;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+.offer-card input:hover {
+  background-color: #1487a7;
+}
+.offers + div {
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 1.2em;
+  margin: auto;
+  padding: 20px 0;
+}
+.pro-sexion {
+  background-color: white;
+  padding-bottom: 50px;
+}
+.offers-description:nth-of-type(3) {
+  width: 60%;
+  padding-bottom: 50px;
+}
+.hotel-bg {
+  background-image: url("../public/hotelPic.png");
+  background-repeat: no-repeat;
+  background-position: fixed;
+  background-size: cover;
+
+  font-weight: 600;
+  padding-top: 120px;
+  width: 70%;
+  margin: auto;
+}
+.hotel-bg div:nth-of-type(1) {
+  margin: 0 10%;
+  font-size: 1.3em;
+  color: white;
+  width: 80%;
+  margin-bottom: 70px;
+}
+.hotel-bg div:nth-of-type(2) {
+  display: inline-block;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 5px 50px;
+  border-radius: 5px;
+  margin-bottom: 70px;
+}
+.contact-us {
+  text-align: center;
+  padding: 20px 0;
+}
+.utilisation-faq {
+  background-color: white;
+}
+.description-header {
+  width: 100%;
+  text-align: center;
+  line-height: normal;
+}

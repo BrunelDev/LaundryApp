@@ -1,51 +1,58 @@
 "use client";
 import { Fragment } from "react";
-import { Link } from "react-router-dom";
-import { FacebookLogo } from "../logo/logo";
-import { GmailLogo } from "../logo/logo";
+import { FacebookLogo, GmailLogo } from "../logo/logo";
 import "../style/laundry.css";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useShowFormStore } from "@/hooks/useStore";
+
 export function SigninForm() {
-  const { showSigninForm, setShowSigninForm } = useShowFormStore();
+  const { showLoginForm, showSigninForm, setShowLoginForm, setShowSigninForm } =
+    useShowFormStore();
+  const [error, setError] = useState("");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [ConfirmPassword, setConfirmPassword] = useState("");
+  const [hide, setHide] = useState(false);
+
+  function showLogin(show) {
+    setShowLoginForm(show);
+    setShowSigninForm(!show);
+  }
   const router = useRouter();
   async function handleSubmit(e) {
     e.preventDefault();
 
     try {
-      if (!username || !password || !ConfirmPassword) {
+      if (username === "" || password === "" || ConfirmPassword === "") {
         setError("Tous les champs sont obligatoires !");
+        return;
       }
-      if (!password != !ConfirmPassword) {
+      if (password !== ConfirmPassword) {
         setError("Mots de passes non identiques");
+        return;
       }
 
-      if (res.error) {
-        console.log("erreur lors de la connexion");
-      }
       res = await fetch("api/alreadyRegister", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),
       });
+      if (res.error) {
+        console.log("erreur lors de la connexion");
+      }
       const user = await res.json();
       if (user) {
-        setError("L'utilisateur est déja connecté");
+        setError("L'utilisateur existe déjà");
         return;
       }
-      router.replace("/login");
+      showLogin(true);
       return;
     } catch (e) {
       console.log("erreur lors de la connexion a l'api");
       return;
     }
   }
-  const [error, setError] = useState("");
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [ConfirmPassword, setConfirmPassword] = useState("");
-  const [hide, setHide] = useState(false);
 
   return (
     <>
@@ -90,12 +97,13 @@ export function SigninForm() {
               required={true}
               value={username}
               onChange={(e) => {
+                setError("");
                 setUsername(e.target.value);
               }}
             />
           </fieldset>
           <fieldset>
-            <legend>password</legend>
+            <legend>Mot de passe</legend>
             <div className="flex relative">
               <input
                 type="password"
@@ -104,6 +112,7 @@ export function SigninForm() {
                 value={password}
                 minLength={8}
                 onChange={(e) => {
+                  setError("");
                   setPassword(e.target.value);
                 }}
               />
@@ -132,6 +141,7 @@ export function SigninForm() {
                 value={ConfirmPassword}
                 minLength={8}
                 onChange={(e) => {
+                  setError("");
                   setConfirmPassword(e.target.value);
                 }}
               />
@@ -155,8 +165,8 @@ export function SigninForm() {
         </form>
         {error != "" && <span className="form-error">{error}</span>}
         <div className="already-have-account">
-          Already have account ?{" "}
-          <span className="text-red-400 login-link">Login</span>
+          Vous avez déjà un compte ?{" "}
+          <span className="text-red-400 login-link">S'inscrire</span>
           <br />
           <span className="text-center">or</span>
           <div className="logo-for-login">
