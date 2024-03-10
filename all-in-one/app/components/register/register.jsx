@@ -33,19 +33,33 @@ export function SigninForm() {
         return;
       }
 
-      res = await fetch("api/alreadyRegister", {
+      const res = await fetch("api/alreadyRegister", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),
       });
       if (res.error) {
         console.log("erreur lors de la connexion");
+        return;
       }
       const user = await res.json();
-      if (user) {
+      if (user.user !== null) {
+        console.log(user);
         setError("L'utilisateur existe déjà");
         return;
       }
+      const resB = await fetch("api/register", {
+        method: "POST",
+        header: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ username, password }),
+      });
+      if (!resB.ok) {
+        print("données non postées");
+        return;
+      }
+
       showLogin(true);
       return;
     } catch (e) {

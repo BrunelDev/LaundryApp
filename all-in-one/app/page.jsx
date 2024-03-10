@@ -140,6 +140,13 @@ export default function home() {
       </div>
       <div className="">
         <Footer />
+        <button
+          onClick={() => {
+            signOut();
+          }}
+        >
+          Deconnexion
+        </button>
       </div>
     </div>
   );

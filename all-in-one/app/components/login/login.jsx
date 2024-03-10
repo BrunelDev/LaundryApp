@@ -18,11 +18,29 @@ export function LoginForm() {
         setError("Tous les champs sont obligatoires !");
         return;
       }
+      const resA = await fetch("api/login", {
+        method: "POST",
+        header: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ username, password }),
+      });
+      const { user } = await resA.json();
+      console.log(user);
+      if (!resA.ok) {
+        console.log("erreur lors de la verification de l'existence du compte");
+        return;
+      }
+      if (!user) {
+        setError("l'utilisateur n'est pas enrégistré");
+        return;
+      }
       const res = await signIn("credentials", {
         username,
         password,
         redirect: false,
       });
+
       if (res.error) {
         console.log("erreur lors de la connexion");
       }

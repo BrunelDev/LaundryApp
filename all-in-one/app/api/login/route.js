@@ -11,9 +11,12 @@ export async function POST(req) {
     console.log(hashedPassword);
 
     await connectDb();
-    await User.create({ username, password });
+    const res = await User.findOne(
+      { username: username, password: password },
+      { _id: 0 }
+    );
     console.log(username, password);
-    return NextResponse.json({ message: "Form data posted" }, { status: 200 });
+    return NextResponse.json({ res: res }, { status: 200 });
   } catch (e) {
     console.log(
       "erreur de l'envoie des données de l'api vers la base de donnée"
