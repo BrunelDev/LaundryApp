@@ -3,6 +3,7 @@ import { Navbar } from "./components/navbar/navbar.jsx";
 import { Footer } from "./components/footer/footer.jsx";
 import { Login } from "./components/login/login.jsx";
 import { signOut } from "next-auth/react";
+import { ListDecoration } from "./components/logo/logo.jsx";
 import "./page.css";
 
 export default function home() {
@@ -27,7 +28,7 @@ export default function home() {
         </div>
       </div>
       <div className="functioning">
-        <div className="tilte">Comment ça marche ?</div>
+        <div className="title">Comment ça marche ?</div>
         <div className="subtitle">On s'occupe de tout !</div>
         <div className="cards-container">
           <div className="card">
@@ -59,6 +60,83 @@ export default function home() {
       <div className="services">
         <div className="title">Services</div>
         <div className="subtitle">Services et offres</div>
+        <div className="cards2-container">
+          <div className="card2">
+            <div>
+              <img src="iron.png" alt="an iron" />
+              <div className="card2-title">Economique</div>
+            </div>
+            <div>Pour repasser vos vetements</div>
+            <div>Que contient cette formule ?</div>
+            <ul>
+              <li>
+                {" "}
+                <ListDecoration />
+                <div className="pl-5">Repassage de vos vetements</div>
+              </li>
+              <li>
+                <ListDecoration />
+                <div className="pl-5">jusqu'à 30 kilos de colis</div>
+              </li>
+            </ul>
+            <hr />
+
+            <div>
+              A partir de <span>5000 francs CFA</span>
+            </div>
+            <input type="submit" value="Choisir" />
+          </div>
+          <div className="card2">
+            <div>
+              <img src="iron.png" alt="an iron" />
+              <div className="card2-title">Economique</div>
+            </div>
+            <div>Pour repasser vos vetements</div>
+            <div>Que contient cette formule ?</div>
+            <ul>
+              <li>
+                {" "}
+                <ListDecoration />
+                <div className="pl-5">Repassage de vos vetements</div>
+              </li>
+              <li>
+                <ListDecoration />
+                <div className="pl-5">jusqu'à 30 kilos de colis</div>
+              </li>
+            </ul>
+            <hr />
+
+            <div>
+              A partir de <span>5000 francs CFA</span>
+            </div>
+            <input type="submit" value="Choisir" />
+          </div>
+          <div className="card2">
+            <div>
+              <img src="iron.png" alt="an iron" />
+              <div className="card2-title">Economique</div>
+            </div>
+            <div>Pour repasser vos vetements</div>
+            <div>Que contient cette formule ?</div>
+            <ul>
+              <li>
+                {" "}
+                <ListDecoration />
+                <div className="pl-5">Repassage de vos vetements</div>
+              </li>
+              <li>
+                <ListDecoration />
+                <div className="pl-5">jusqu'à 30 kilos de colis</div>
+              </li>
+            </ul>
+            <hr />
+
+            <div>
+              A partir de <span>5000 francs CFA</span>
+            </div>
+            <input type="submit" value="Choisir" />
+          </div>
+        </div>
       </div>
       <div className="">
         <Footer />
