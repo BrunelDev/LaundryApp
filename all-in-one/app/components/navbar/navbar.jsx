@@ -1,8 +1,9 @@
 import "./navbar.css";
 import { Bubbles } from "../logo/logo";
+/*import { Menu } from "../menu/menu";*/
 export function Navbar({ actual }) {
   return (
-    <div>
+    <div className="fixed left-0 top-0 w-full">
       <div className="navbar">
         <div>Logo</div>
         <div>
@@ -15,8 +16,10 @@ export function Navbar({ actual }) {
             <li id={actual == "localisation" ? "actual" : ""}>Localisation</li>
             <li id={actual == "contact" ? "actual" : ""}>Contact</li>
           </ul>
+          {/*<Menu />*/}
         </div>
       </div>
+      <hr />
     </div>
   );
 }

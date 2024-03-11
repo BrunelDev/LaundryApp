@@ -23,6 +23,9 @@ li:hover {
   margin-right: 20px;
   animation: upToDown 0.4s;
 }
+hr {
+  box-shadow: 0 3px 8px gray;
+}
 @keyframes upToDown {
   50% {
     transform: translateY(6px);

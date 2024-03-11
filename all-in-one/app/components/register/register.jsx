@@ -56,7 +56,7 @@ export function SigninForm() {
         body: JSON.stringify({ username, password }),
       });
       if (!resB.ok) {
-        print("données non postées");
+        console.log("données non postées");
         return;
       }
 

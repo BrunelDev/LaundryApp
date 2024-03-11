@@ -25,13 +25,12 @@ export function LoginForm() {
         },
         body: JSON.stringify({ username, password }),
       });
-      const { user } = await resA.json();
-      console.log(user);
+      const data = await resA.json();
+      console.log("user", data.isRegistered);
       if (!resA.ok) {
         console.log("erreur lors de la verification de l'existence du compte");
-        return;
       }
-      if (!user) {
+      if (!data.isRegistered) {
         setError("l'utilisateur n'est pas enrégistré");
         return;
       }
@@ -47,7 +46,7 @@ export function LoginForm() {
       router.replace("/");
       return;
     } catch (e) {
-      console.log("erreur lors de la connexion a l'api");
+      console.log("erreur lors de la connexion a l'api", e);
       return;
     }
   }
@@ -99,6 +98,7 @@ export function LoginForm() {
               required={true}
               value={username}
               onChange={(e) => {
+                setError("");
                 setUsername(e.target.value);
               }}
             />
@@ -113,6 +113,7 @@ export function LoginForm() {
                 value={password}
                 minLength={8}
                 onChange={(e) => {
+                  setError("");
                   setPassword(e.target.value);
                 }}
               />

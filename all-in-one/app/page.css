@@ -167,3 +167,10 @@ body {
   background-color: #d0f6ff;
   margin-bottom: 25px;
 }
+@media screen and (max-width: 874px) {
+  .card2 {
+    margin: auto;
+  }
+}
+@media screen and (max-width: 874px) {
+}
