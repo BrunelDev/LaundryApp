@@ -1,6 +1,10 @@
 "use client";
 import { FacebookLogo } from "../components/logo/logo";
 
+<<<<<<< HEAD
+=======
+import "../components/style/laundry.css";
+>>>>>>> 44b308879748d80b9c5f559d750bf42d7c6e1f83
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { signIn } from "next-auth/react";

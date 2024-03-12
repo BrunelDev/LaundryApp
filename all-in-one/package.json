@@ -9,10 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+<<<<<<< HEAD
     "bcryptjs": "^2.4.3",
     "mongodb": "^6.4.0",
+=======
+    "bcrypt": "^5.1.1",
+>>>>>>> 44b308879748d80b9c5f559d750bf42d7c6e1f83
     "mongoose": "^8.2.1",
-    "next": "14.1.3",
+    "next": "^14.1.3",
     "next-auth": "^4.24.7",
     "react": "^18.2.0",
     "react-dom": "^18",
@@ -20,6 +24,7 @@
     "zustand": "^4.5.2"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

@@ -1,5 +1,5 @@
 "use client";
-import "../style/laundry.css";
+import "./menu.css";
 import React, { useState } from "react";
 import { Sidebar } from "../sidebar/sidebar.jsx";
 
@@ -8,7 +8,7 @@ export function Menu() {
   function actionMenu() {
     setShowMenu(!showMenu);
   }
-  const menuClass = !showMenu ? "menu-box" : "menu-box menu-animated";
+  const menuClass = !showMenu ? "menu-box" : "menu-animated";
   return (
     <div
       onClick={() => {
@@ -19,7 +19,11 @@ export function Menu() {
       <div className="menu-top"></div>
       <div className="menu-middle"></div>
       <div className="menu-bottom"></div>
-      {showMenu && <Sidebar />}
+      {showMenu && (
+        <div className="sidebar">
+          <Sidebar />
+        </div>
+      )}
     </div>
   );
 }

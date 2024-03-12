@@ -8,11 +8,9 @@ export function Footer() {
             <span className="text-pink-pure">L</span>audry
             <span className="text-pink-pure">S</span>ervice
           </h5>
-          <a href="mailto:ahokpossibrunel@gmail.com">
-            ahokpossibrunel@gmail.com
-          </a>
+          <a href="mailto:laundry@gmail.com">laudry@gmail.com</a>
           <div className="footer-social">
-            <h5>Connect with me</h5>
+            <h5>Connect with us</h5>
             <div className="footer-icon">
               <a href="mailto:ahokpossibrunel@gmail.com">
                 <img src="Email.png" alt="Email icon" />

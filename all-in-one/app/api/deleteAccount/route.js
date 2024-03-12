@@ -5,13 +5,11 @@ export async function POST(req) {
   try {
     const { username, password } = await req.json();
     await connectDb();
-    const user = await User.findOne({ username, password }).select([
-      "username",
-      "password",
-    ]);
-    console.log("user: ", user);
-    return NextResponse.json({ user });
+    const res = await User.findOne({ username: username });
+    if (res) {
+      console.log("voulez vous réellement supprimer votre compte ?");
+    }
   } catch (e) {
-    console.log("erreur api already");
+    console.log("erreur lors de la suppression de compte");
   }
 }

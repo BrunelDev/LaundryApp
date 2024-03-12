@@ -1,11 +1,18 @@
 "use client";
 import { Navbar } from "./components/navbar/navbar.jsx";
+import { Footer } from "./components/footer/footer.jsx";
 import { Login } from "./components/login/login.jsx";
+<<<<<<< HEAD
 import "./page.css"
 
+=======
+>>>>>>> 44b308879748d80b9c5f559d750bf42d7c6e1f83
 import { signOut } from "next-auth/react";
+import { ListDecoration } from "./components/logo/logo.jsx";
+import "./page.css";
 
 export default function home() {
+<<<<<<< HEAD
 
   return (
     <div>
@@ -115,58 +122,149 @@ export default function home() {
           </div>
         </div>
       </div>
+=======
+  return (
+    <div>
+>>>>>>> 44b308879748d80b9c5f559d750bf42d7c6e1f83
       <div>
-        Pour votre première commande, recevez un sac à linge offert par Tambour
-        !
+        <Navbar actual={"accueil"} />
       </div>
-      <div className="pro-sexion">
-        <div className="subtitle">Vous êtes un professionnel ?</div>
-        <div className="subtitle-description">
-          Profitez d'un service de blanchisserie flexible et rapide à Calavi
-        </div>
-        <div className="offers-description">
-          Notre service s'adresse aux professionnels ayant du linge à laver.
-          Confiez-nous votre linge, profitez d'un lavage de qualité à des prix
-          défiants toute concurrence et concentrez-vous sur votre coeur de
-          métier.
-        </div>
-        <div className="hotel-bg">
+      <div className="top">
+        <div className="top-left">
+          <div>20% de reduction sur un un abonnement d'un mois</div>
+          <div>La laverie qui vous soulage la vie .</div>
           <div>
-            Linge de lit blanc Vous êtes propriétaire d'un restaurant, d'un bar,
-            d'un logement BnB, d'un institut de beauté ou encore d'un salon de
-            coiffure ?
+            Nous lavons, repassons et plions à un prix abordable. Choisissez et
+            souscrivez à nos options disponibles.
           </div>
-          <div>Appelez nous !</div>
+          <div>Comment ça marche ?</div>
+        </div>
+        <div className="top-right">
+          <div></div>
+          <img src="laundrymachine.png" alt="Une machine a laver" />
         </div>
       </div>
-      <div className="contact-us">
-        Vous êtes un professionnel ? Contactez-nous par mail sur
-        contact@tambourlaverie.com pour une offre personnalisée
+      <div className="functioning">
+        <div className="title">Comment ça marche ?</div>
+        <div className="subtitle">On s'occupe de tout !</div>
+        <div className="cards-container">
+          <div className="card">
+            <div>Etape 1</div>
+            <div>Récupérer le linge</div>
+            <img src="pickup.png" alt="a post man" />
+          </div>
+          <div className="card">
+            <div>Etape 2</div>
+            <div>Laver et sécher</div>
+            <img src="washAndDry.png" alt="a woman next to a washing machine" />
+          </div>
+
+          <div className="card">
+            <div>Etape 3</div>
+            <div>Plier</div>
+            <img
+              src="fold.png"
+              alt="a functioning washing machine next to folded cloth"
+            />
+          </div>
+          <div className="card">
+            <div>Etape 4</div>
+            <div>Livrer</div>
+            <img src="delivery.png" alt="a post man and a woman" />
+          </div>
+        </div>
       </div>
-      <div className="utilisation-faq">
-        <div className="subtitle">Mode d'emploi et FAQ</div>
-        <div className="subtitle-description">
-          ⚠️ ATTENTION : NOUS NE SOMMES PAS UN PRESSING
-        </div>
-        <div className="offers-description description-header">
-          La différence entre laverie et pressing, c’est quoi ?
-        </div>
-        <div className="offers-description">
-          Notre service réalise le lavage de votre linge de tous les jours en
-          machine avec de l’eau et de la lessive. Le pressing permet de détacher
-          le linge fragile en lavage à sec, c’est à dire avec un solvant. Notre
-          prestation est différente d’un pressing et aussi{" "}
-          <strong>moins coûteuse</strong>.
+      <div className="services">
+        <div className="title">Services</div>
+        <div className="subtitle">Services et offres</div>
+        <div className="cards2-container">
+          <div className="card2">
+            <div>
+              <img src="iron.png" alt="an iron" />
+              <div className="card2-title">Economique</div>
+            </div>
+            <div>Pour repasser vos vetements</div>
+            <div>Que contient cette formule ?</div>
+            <ul>
+              <li>
+                {" "}
+                <ListDecoration />
+                <div className="pl-5">Repassage de vos vetements</div>
+              </li>
+              <li>
+                <ListDecoration />
+                <div className="pl-5">jusqu'à 30 kilos de colis</div>
+              </li>
+            </ul>
+            <hr />
+
+            <div>
+              A partir de <span>5000 francs CFA</span>
+            </div>
+            <input type="submit" value="Choisir" />
+          </div>
+          <div className="card2">
+            <div>
+              <img src="iron.png" alt="an iron" />
+              <div className="card2-title">Economique</div>
+            </div>
+            <div>Pour repasser vos vetements</div>
+            <div>Que contient cette formule ?</div>
+            <ul>
+              <li>
+                {" "}
+                <ListDecoration />
+                <div className="pl-5">Repassage de vos vetements</div>
+              </li>
+              <li>
+                <ListDecoration />
+                <div className="pl-5">jusqu'à 30 kilos de colis</div>
+              </li>
+            </ul>
+            <hr />
+
+            <div>
+              A partir de <span>5000 francs CFA</span>
+            </div>
+            <input type="submit" value="Choisir" />
+          </div>
+          <div className="card2">
+            <div>
+              <img src="iron.png" alt="an iron" />
+              <div className="card2-title">Economique</div>
+            </div>
+            <div>Pour repasser vos vetements</div>
+            <div>Que contient cette formule ?</div>
+            <ul>
+              <li>
+                {" "}
+                <ListDecoration />
+                <div className="pl-5">Repassage de vos vetements</div>
+              </li>
+              <li>
+                <ListDecoration />
+                <div className="pl-5">jusqu'à 30 kilos de colis</div>
+              </li>
+            </ul>
+            <hr />
+
+            <div>
+              A partir de <span>5000 francs CFA</span>
+            </div>
+            <input type="submit" value="Choisir" />
+          </div>
         </div>
       </div>
-      <button onClick={() => signOut()}>Se deconnecter</button>
+      <div className="">
+        <Footer />
+        <button
+          onClick={() => {
+            signOut();
+          }}
+        >
+          Deconnexion
+        </button>
+      </div>
     </div>
   );
-}
-
-{
-}
-{
-  /*
-   */
 }

@@ -18,18 +18,35 @@ export function LoginForm() {
         setError("Tous les champs sont obligatoires !");
         return;
       }
+      const resA = await fetch("api/login", {
+        method: "POST",
+        header: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ username, password }),
+      });
+      const data = await resA.json();
+      console.log("user", data.isRegistered);
+      if (!resA.ok) {
+        console.log("erreur lors de la verification de l'existence du compte");
+      }
+      if (!data.isRegistered) {
+        setError("l'utilisateur n'est pas enrégistré");
+        return;
+      }
       const res = await signIn("credentials", {
         username,
         password,
         redirect: false,
       });
+
       if (res.error) {
         console.log("erreur lors de la connexion");
       }
       router.replace("/");
       return;
     } catch (e) {
-      console.log("erreur lors de la connexion a l'api");
+      console.log("erreur lors de la connexion a l'api", e);
       return;
     }
   }
@@ -54,7 +71,7 @@ export function LoginForm() {
       >
         Bonjour...
         <div className="flex">
-          <h2>Register</h2>
+          <h2>Connexion</h2>
           <svg
             onClick={(e) => {
               setHide(false);
@@ -81,12 +98,13 @@ export function LoginForm() {
               required={true}
               value={username}
               onChange={(e) => {
+                setError("");
                 setUsername(e.target.value);
               }}
             />
           </fieldset>
           <fieldset>
-            <legend>password</legend>
+            <legend>Mot de passe</legend>
             <div className="flex relative">
               <input
                 type="password"
@@ -95,6 +113,7 @@ export function LoginForm() {
                 value={password}
                 minLength={8}
                 onChange={(e) => {
+                  setError("");
                   setPassword(e.target.value);
                 }}
               />
@@ -114,12 +133,16 @@ export function LoginForm() {
             </div>
           </fieldset>
 
-          <input type="submit" value="Login" className="register-button" />
+          <input
+            type="submit"
+            value="Se connecter"
+            className="register-button"
+          />
         </form>
         {error != "" && <span className="form-error">{error}</span>}
         <div className="already-have-account">
-          Already have account ?{" "}
-          <span className="text-red-400 login-link">Login</span>
+          Vous avez déjà un compte ?{" "}
+          <span className="text-red-400 login-link">Connectez vous</span>
           <br />
           <span className="text-center">or</span>
           <div className="logo-for-login">
