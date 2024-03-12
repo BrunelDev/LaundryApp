@@ -1,11 +1,11 @@
 "use client";
 import { Navbar } from "./components/navbar/navbar.jsx";
 import { Login } from "./components/login/login.jsx";
+import "./page.css"
 
 import { signOut } from "next-auth/react";
 
 export default function home() {
-  const { status, account } = useAuth();
 
   return (
     <div>
@@ -19,9 +19,7 @@ export default function home() {
           <div className="top-content">
             <span>LA LAVERIE QUI SIMPLIFIE LA VIE</span>
             <br />
-            <span>
-              On collecte, lave, sèche, repasse et livre votre linge à Calavi
-            </span>
+            <span>On collecte, lave, sèche, repasse et livre votre linge</span>
             <br />
             <span>Comment ca marche ?</span>
             <br />
