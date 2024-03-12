@@ -6,24 +6,24 @@
   background-color: #f7feff;
   color: #1e1e1e;
 }
-ul {
+.navbar ul {
   display: flex;
-  margin-right: 60px;
+  transform: translateX(0px);
 }
-li {
+.navbar li {
   margin-right: 20px;
   padding: 10px 0px;
 
   cursor: pointer;
 }
-li#actual {
+.navbar li#actual {
   font-weight: 700;
 }
-li:hover {
+.navbar li:hover {
   margin-right: 20px;
   animation: upToDown 0.4s;
 }
-hr {
+.navbar hr {
   box-shadow: 0 3px 8px gray;
 }
 @keyframes upToDown {
@@ -38,5 +38,22 @@ hr {
   100% {
     transform: translateY(0px);
     opacity: 1;
+  }
+}
+.menu {
+  display: none;
+}
+@media screen and (max-width: 720px) {
+  .navbar ul {
+    display: none;
+  }
+  .menu {
+    display: block;
+    position: fixed;
+    top: 0px;
+    right: 0;
+  }
+  .navbar {
+    height: 44px;
   }
 }

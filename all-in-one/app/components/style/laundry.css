@@ -6,58 +6,7 @@ body {
   background-color: #202127;
   color: rgb(197, 197, 197);
 }
-.menu-top {
-  align-self: center;
-  margin: 3px 0px 1.5px 0px;
-  width: 21.7px;
-  height: 1.5px;
-  border-radius: 5px;
-  background-color: white;
-  transition: all 0.5s;
-}
-.menu-middle {
-  align-self: center;
-  margin: 1px 0 1.5px 0;
-  width: 21.7px;
-  height: 1.5px;
-  border-radius: 5px;
-  background-color: white;
-  opacity: 1;
-  transition: all 0.5s;
-}
-.menu-bottom {
-  align-self: center;
-  margin: 1px 0 3px 0;
-  width: 21.7px;
-  height: 1.5px;
-  border-radius: 5px;
-  background-color: white;
-  transition: all 0.5s;
-}
-.menu-box:hover .menu-middle {
-  transform: translateY(3px);
-}
-.menu-box:hover .menu-bottom {
-  transform: translateY(6px);
-}
-.menu-animated:hover .menu-middle {
-  transform: translateY(0);
-}
-.menu-animated:hover .menu-bottom {
-  transform: translateY(7.8px);
-}
-.menu-animated .menu-top {
-  transform-origin: top left;
-  transform: translateY(0.5px) translateX(8px) rotate(45deg);
-}
-.menu-animated .menu-middle {
-  transform: translateX(20px);
-  opacity: 0;
-}
-.menu-animated .menu-bottom {
-  transform-origin: left;
-  transform: translate(6px, 7.8px) rotate(-45deg);
-}
+
 .register-container {
   color: #282c33;
 
@@ -143,32 +92,6 @@ body {
   background-color: rgb(230, 69, 69);
 }
 
-@media screen and (max-width: 709px) {
-  .project-header img {
-    width: 50%;
-    right: 0px;
-    top: 25%;
-  }
-  .project-header h6 {
-    right: -30%;
-  }
-}
-
-@media screen and (max-width: 735px) {
-  .quote-author {
-    top: 103px;
-  }
-  .quote-symbol2 {
-    top: 91px;
-  }
-}
-
-@media screen and (max-width: 838px) {
-  .quote-container {
-    margin-left: 20%;
-  }
-}
-
 @media screen and (max-width: 678px) {
   nav > ul li {
     display: none;
@@ -177,38 +100,7 @@ body {
     display: block;
   }
 }
-@media screen and (max-width: 422px) {
-  .quote-container {
-    margin-left: 5%;
-    margin-right: 5%;
-    font-size: 0.8em;
-  }
-  .quote-author {
-    top: 88px;
-  }
-  .quote-symbol2 {
-    top: 78px;
-  }
-  .quote-symbol1 {
-    top: 8px;
-  }
-}
-@media screen and (max-width: 730px) {
-  .contact-body {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-  .contact-box {
-    margin-left: 10%;
-    margin-right: 10%;
-    text-align: center;
-    position: static;
-    width: 80%;
-  }
-  .contact-text {
-    width: 80%;
-  }
-}
+
 @media screen and (max-width: 400px) {
   .register-container {
     width: 90%;

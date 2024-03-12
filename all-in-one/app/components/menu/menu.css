@@ -1,4 +1,7 @@
-.menu-box {
+.menu-box,
+.menu-animated {
+  z-index: 1;
+
   width: 45px;
   height: 100%;
   background-color: transparent;
@@ -14,42 +17,57 @@ largeur de menu voulue => ?
 */
 .menu-top {
   align-self: center;
-  margin: 3px 0px 1.5px 0px;
-  width: 21.7px;
-  height: 1.5px;
+  margin: 3px 0px 2px 0px;
+  width: 26px;
+  height: 2px;
+  z-index: 999;
   border-radius: 5px;
-  background-color: white;
+  background-color: gray;
   transition: all 0.5s;
 }
 .menu-middle {
   align-self: center;
-  margin: 1px 0 1.5px 0;
-  width: 21.7px;
-  height: 1.5px;
+  margin: 1px 0 2px 0;
+  width: 26px;
+  z-index: 999;
+  height: 2px;
   border-radius: 5px;
-  background-color: white;
+  background-color: gray;
   opacity: 1;
   transition: all 0.5s;
 }
 .menu-bottom {
   align-self: center;
   margin: 1px 0 3px 0;
-  width: 21.7px;
-  height: 1.5px;
+  width: 26px;
+  z-index: 999;
+  height: 2px;
   border-radius: 5px;
-  background-color: white;
-  transition: all 0.2s ease-in-out 0.1s;
+  background-color: gray;
+  transition: all 0.5s;
+}
+.menu-box:hover .menu-middle {
+  transform: translateY(3px);
+}
+.menu-box:hover .menu-bottom {
+  transform: translateY(6px);
 }
 
-.menu-box:hover .menu-top {
+.menu-animated .menu-top {
   transform-origin: top left;
   transform: translateY(0.5px) translateX(8px) rotate(45deg);
 }
-.menu-box:hover .menu-middle {
+.menu-animated .menu-middle {
   transform: translateX(20px);
   opacity: 0;
+  display: none;
 }
-.menu-box:hover .menu-bottom {
+.menu-animated .menu-bottom {
   transform-origin: left;
-  transform: translate(6px, 7.8px) rotate(-45deg);
+  transform: translate(6px, 13px) rotate(-45deg);
+}
+.sidebar {
+  position: fixed;
+  right: 0px;
+  margin-left: auto;
 }
