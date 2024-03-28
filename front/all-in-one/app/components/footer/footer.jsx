@@ -87,7 +87,7 @@ export function Footer() {
         <hr class="my-8 border-gray-700" />
         <div class="flex justify-between items-center">
           <p>
-            &copy; 2024 <p class=" text-3xl text-blue-500">ALL IN ONE</p>{" "}
+            &copy; 2024 <p class="text-blue-500">ALL IN ONE</p>{" "}
           </p>
           <ul class="flex space-x-4">
             <li>
