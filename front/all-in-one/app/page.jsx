@@ -12,7 +12,7 @@ export default function Home() {
       <div>
         <Navbar actual={"accueil"} />
       </div>
-      <div className="top">
+      <div className="top bg">
         <div className="top-left">
           <div>20% de reduction sur un un abonnement d'un mois</div>
           <div>La laverie qui vous soulage la vie .</div>
