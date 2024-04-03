@@ -1,0 +1,15 @@
+.total {
+  color: #21b7e2;
+  font-size: 1em;
+}
+.validation {
+  margin-left: 10px;
+  width: 150px;
+  border-radius: 10px;
+  height: 50px;
+  transform: translateY(100%);
+  text-align: center;
+  background-color: #21b7e2;
+  border: solid 1px;
+  margin-right: 10px;
+}

@@ -1,0 +1,44 @@
+.jauge {
+  margin: 100px auto 5px auto;
+  width: 30%;
+  height: 30%;
+}
+.text {
+  font-size: 0.8em;
+  font-weight: 100;
+}
+.title {
+  color: #21b7e2;
+  font-size: 1.2em;
+}
+.register {
+  text-align: center;
+  background-color: #edf2f3;
+  width: 300px;
+  margin: auto;
+  border-radius: 15px;
+  padding: 20px 10px;
+}
+.quantifier {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 100px;
+}
+.validation {
+  width: 150px;
+  color: #f7feff;
+  background-color: #21b7e2;
+  text-align: center;
+  height: 45px;
+  border-radius: 25px;
+  cursor: pointer;
+  transform: translateY(-30%);
+}
+.bottom {
+  margin: auto;
+  width: 90%;
+}
+.inputPound {
+  background-color: transparent;
+  width: 20px;
+}

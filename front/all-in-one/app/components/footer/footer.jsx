@@ -86,9 +86,9 @@ export function Footer() {
         </div>
         <hr class="my-8 border-gray-700" />
         <div class="flex justify-between items-center">
-          <p>
+          <div>
             &copy; 2024 <p class="text-blue-500">ALL IN ONE</p>{" "}
-          </p>
+          </div>
           <ul class="flex space-x-4">
             <li>
               <a href="#" class="hover:text-gray-400">

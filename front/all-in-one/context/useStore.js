@@ -1,8 +1,10 @@
 import { create } from "zustand";
 
-export const UseStore = create((set) => ({
-  statu: "null",
-  authentificated(statu) {
-    set({ status: statu });
+export const UseWeigth = create((set) => ({
+  quantity: 0,
+  weight: 0,
+  setQuantity(number) {
+    set((state) => ({ quantity: state.quantity + number }));
   },
+  setWeight: (weight) => set((state) => ({ weight: state.weight + weight })),
 }));
