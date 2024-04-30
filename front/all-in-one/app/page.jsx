@@ -6,6 +6,7 @@ import { signOut } from "next-auth/react";
 import { ListDecoration } from "./components/logo/logo.jsx";
 import "./page.css";
 
+
 export default function Home() {
   return (
     <div>
