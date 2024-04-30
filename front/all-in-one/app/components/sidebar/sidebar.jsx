@@ -1,6 +1,6 @@
 import "./sidebar.css";
 import Link from "next/link";
-export function Sidebar() {
+export function Sidebar({ actual }) {
   return (
     <div className="sidebar">
       <ul>

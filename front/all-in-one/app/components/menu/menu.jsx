@@ -3,7 +3,7 @@ import "./menu.css";
 import React, { useState } from "react";
 import { Sidebar } from "../sidebar/sidebar.jsx";
 
-export function Menu() {
+export function Menu({ actual }) {
   const [showMenu, setShowMenu] = useState(false);
   function actionMenu() {
     setShowMenu(!showMenu);
@@ -21,7 +21,7 @@ export function Menu() {
       <div className="menu-bottom"></div>
       {showMenu && (
         <div className="sidebar">
-          <Sidebar />
+          <Sidebar actual={actual} />
         </div>
       )}
     </div>
