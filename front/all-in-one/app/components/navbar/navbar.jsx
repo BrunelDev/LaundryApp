@@ -9,14 +9,18 @@ export function Navbar({ actual }) {
         <div>Logo</div>
         <div>
           <ul>
-            <li id={actual == "accueil" ? "actual" : ""}>Accueil</li>
-            <li id={actual == "comment ca marche" ? "actual" : ""}>
-              Comment ca marche
-            </li>
+            <Link href="/">
+              <li id={actual == "accueil" ? "actual" : ""}>Accueil</li>
+            </Link>
             <Link href="/service">
               <li id={actual == "services" ? "actual" : ""}>Services</li>
             </Link>
-            <li id={actual == "localisation" ? "actual" : ""}>Localisation</li>
+            <Link href="/localisation">
+              <li id={actual == "localisation" ? "actual" : ""}>
+                Localisation
+              </li>
+            </Link>
+
             <Link href="/contact">
               <li id={actual == "contact" ? "actual" : ""}>Contact</li>
             </Link>
