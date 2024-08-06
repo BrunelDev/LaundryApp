@@ -89,7 +89,7 @@ export function LoginForm() {
           setHide(true);
         }}
       >
-        Bonjour...
+        Bonjour
         <div className="flex">
           <h2>Connexion</h2>
           <svg
@@ -172,7 +172,7 @@ export function LoginForm() {
         {error != "" && <span className="form-error">{error}</span>}
         <div className="already-have-account">
           Vous avez déjà un compte ?{" "}
-          <span className="text-red-400 login-link">Connectez vous</span>
+          <span className="text-red-400 login-link">Connectez-vous</span>
           <br />
           <span className="text-center">or</span>
           <div className="logo-for-login">
