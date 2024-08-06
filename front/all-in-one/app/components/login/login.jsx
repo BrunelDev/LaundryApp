@@ -174,7 +174,7 @@ export function LoginForm() {
           Vous avez déjà un compte ?{" "}
           <span className="text-red-400 login-link">Connectez-vous</span>
           <br />
-          <span className="text-center">or</span>
+          <span className="text-center">ou</span>
           <div className="logo-for-login">
             <div className="mr-6">
               <FacebookLogo />

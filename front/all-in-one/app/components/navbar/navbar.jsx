@@ -26,7 +26,7 @@ export function Navbar({ actual }) {
             </Link>
           </ul>
           <div className="menu z-10">
-            <Menu />
+            <Menu actual={actual} />
           </div>
         </div>
       </div>

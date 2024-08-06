@@ -65,6 +65,9 @@ body {
   right: 10px;
 }
 .register-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 20px;
   color: azure;
   background-color: #202127;
